@@ -3,6 +3,9 @@
 const Route = use('Route')
 
 Route.post('/users', 'UserController.create')
+
+Route.get('/users/:username', 'UserController.show')
+
 Route.post('/sessions', 'SessionController.create')
 
 Route.resource('events', 'EventController')

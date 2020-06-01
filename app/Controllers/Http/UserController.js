@@ -10,6 +10,18 @@ class UserController {
 
     return user
   }
+
+  // listar 1 registro
+  async show({ params }) {
+
+    // return params.username
+
+    // const query = { "username": params.username }
+
+    const usersss = User.find({ email: /foo\.bar/, age: { $gte: 30 } });
+    console.log(usersss)
+    return usersss
+  }
 }
 
 module.exports = UserController
