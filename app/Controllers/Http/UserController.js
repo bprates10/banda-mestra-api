@@ -12,15 +12,12 @@ class UserController {
   }
 
   // listar 1 registro
-  async show({ params }) {
+  async show({ request, res }) {
 
-    // return params.username
+    const users = User.query()
+      .fetch()
 
-    // const query = { "username": params.username }
-
-    const usersss = User.find({ email: /foo\.bar/, age: { $gte: 30 } });
-    console.log(usersss)
-    return usersss
+    return users
   }
 }
 
