@@ -12,9 +12,10 @@ class UserController {
   }
 
   // listar 1 registro
-  async show({ request, res }) {
+  async show({ params }) {
 
     const users = User.query()
+      .where('email', '=', params.mail)
       .fetch()
 
     return users

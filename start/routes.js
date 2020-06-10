@@ -4,7 +4,7 @@ const Route = use('Route')
 
 Route.post('/users', 'UserController.create')
 
-Route.get('/users', 'UserController.show')
+Route.get('/users/:mail', 'UserController.show')
 
 Route.post('/sessions', 'SessionController.create')
 
